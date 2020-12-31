@@ -1,0 +1,418 @@
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+#root {
+  height: 100%;
+}
+html {
+  font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
+body {
+  letter-spacing: 0.25px;
+  line-height: 1.7;
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Montserrat","HelveticaNeue","Helvetica Neue",sans-serif;  
+}
+
+/* Layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 10rem 1fr 1fr;
+  height: 100%;
+}
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+  padding-top: 5rem;
+}
+/* footer */
+
+.connect {
+  padding-bottom: 110px;
+}
+.connect i {
+  margin-left: 20px;
+}
+.list-footer li {
+    color: #999;
+    font-size: 100%;
+    padding-bottom: 5px;
+    list-style: none;
+}
+
+p {
+  padding-bottom: 90px;
+  color: #999;
+    font-size: 80%;
+}
+ul.list-footer {
+  padding-left: 0px;
+}
+footer {
+  padding-top: 20px;
+  grid-area: footer;
+  background: url("//bizweb.dktcdn.net/100/339/085/themes/699262/assets/background_footer.png?1600055630317");
+  color: #ffffff;
+}
+.footer {
+  display: flex;
+}
+.footer h3 {
+  font-size: 150%;
+}
+/* Common */
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(102, 102, 102, 0.85)
+  
+}
+ul li {
+ list-style: none;
+}
+
+/* Header */
+.header-nav-bot a:hover {
+  border: none;
+}
+.nav ul {
+  display: flex;
+}
+
+.nav ul li {
+  list-style: none;
+}
+.nav-right ul  {
+  display: flex;
+}
+.nav-right ul li  {
+  list-style: none;
+}
+header a {
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+/* header a:hover {
+  border-bottom: 4px solid;
+  padding: 20px;
+  text-decoration: none;
+} */
+a.brand {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0,2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2 rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.row.center {
+  justify-content: center;
+}
+/* Image */
+img {
+  border-radius: 0.5rem;
+}
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+
+/* button */
+
+/* button {
+  justify-content: center;
+  align-items: center;
+  background-color: #ffb517;
+  border: 1px solid #ffb517;
+  padding: 8px 0;
+  cursor: pointer;
+  font-family: 'Roboto-Condensed-Bold';
+  height: 40px;
+  width: 200px;
+  border-radius: 2px !important;
+} */
+
+button.small {
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+}
+.col.btn_add.top button {
+  background-color: #ffb517;
+}
+
+/* Card */
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 2rem;
+}
+/* Rating */
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
+
+
+/* cart */
+ul.Info_cart li {
+  border: 1px outset;
+  /* color: black; */
+  padding: 10px;
+  margin-bottom: 5px;
+}
+img.small {
+  max-width: 10rem;
+  width: 100%;
+}
+.min-30 {
+  min-width: 30rem;
+}
+
+.col.cart_bot {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* form */
+.register_form {
+  width: 80%;
+  margin: auto;
+}
+.form_login {
+  width: 80%;
+  margin: auto;
+}
+.form.form input {
+  border-radius: none 5px;
+  padding: 5px;
+  width: 50%;
+}
+
+.form.form button {
+  margin-top: 10px;
+  background-color: #3dc8f6;
+  border: none;
+}
+
+
+.form.form label {
+  font-weight: bold;
+}
+
+
+/* shipping */
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: #f08000;
+  color: #f08000;
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  bottom: 5;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: white;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* table */
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.table button {
+  margin: 0 0.2rem;
+}
+/* .form.form {
+  background-color: white;
+  margin: auto;
+  width: 50%;
+ 
+  border: none solid;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form.form input {
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+}
+
+button.primary {
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  width: 120%;
+  margin-top: 20px;
+  border-radius: 50px;
+}
+
+.form_login {
+  background-color: darkgrey;
+} */
+
+
+
+/* alert */
+
+.alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
+}
+
+.loading {
+  display: block !important;
+}
+
+
+@media (max-width: 760px) {
+  .header-nav.row.fixed-top {
+    display: none;
+  }
+  .header-drop {
+    display: flex;
+  }
+  .footer {
+    display: block;
+  }
+
+
+}
+@media (min-width : 800px) {
+  .header-drop {
+    display: none;
+  }
+
+  
+}
+a:hover {
+  border-bottom: solid;
+  text-decoration: none;
+}
+
+.productName h1 {
+  font-weight: bold;
+  font-size: 30px;
+    font-family: 'Roboto-Condensed-Bold';
+    color: #000;
+    margin: 0px;
+    display: inline-block;
+}
+
+.col.btn_add {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.col.btn_add.top button {
+  width: 150px;
+  border: none;
+  margin-right: 20px;
+}
+.col.btn_add.top  {
+  
+  width: 80%;
+  
+}
+.card.card-body div {
+  font-weight: bold;
+  font-family: 'Roboto-Condensed-Bold';
+  font-size: 14px;
+}
+.primary.block {
+  background-color: #29b474 !important;
+}
+
+.col-lg-6.col-12 div {
+  width: 80% !important;
+}
