@@ -38,16 +38,6 @@ export default function ProductScreen(props) {
   const addToCartHandler = () => {
     props.history.push(`/cart/${productId}?qty=${qty}`);
   };
-  const submitHandler = (e) => {
-    e.preventDefault();
-    if (comment && rating) {
-      dispatch(
-        createReview(productId, { rating, comment, name: userInfo.name })
-      );
-    } else {
-      alert('Please enter comment and rating');
-    }
-  };
   return (
     <div>
       {loading ? (
@@ -71,6 +61,9 @@ export default function ProductScreen(props) {
                     <ul className="list-description">
                       <li>
                         <h1 className="font-weight-bold">{product.name}</h1>
+                      </li>
+                      <li className="key">
+                        {product.key}
                       </li>
                      
                       <li className="font-weight-bold">Giá : ${product.price}</li>
@@ -96,9 +89,10 @@ export default function ProductScreen(props) {
                       
                     <div className="d-flex">
                           <div className="font-weight-bold">Số Lượng</div>
+                         
                           <div>
                           
-                            <select id="inputState" class="form-control"
+                            <select id="inputState" className="form-control"
                               value={qty}
                               onChange={(e) => setQty(e.target.value)}
                             >
@@ -115,7 +109,7 @@ export default function ProductScreen(props) {
                     <button
                       onClick={addToCartHandler}
                       className="addToCart btn btn-primary btn-lg"
-                    ><i class="fa fa-shopping-bag" aria-hidden="true"></i> 
+                    ><i className="fa fa-shopping-bag" aria-hidden="true"></i> 
                      Mua Ngay
                     </button>
                     </div>

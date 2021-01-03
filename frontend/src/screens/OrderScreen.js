@@ -79,6 +79,8 @@ export default function OrderScreen(props) {
   };
 
 
+
+
   return loading ? (
     <LoadingBox></LoadingBox>
   ) : error ? (
@@ -157,7 +159,15 @@ export default function OrderScreen(props) {
             <div className="col">
               <div>
                 <h3>Key Sản Phẩm</h3>
-                <p> {order.isPaid ? `key` : ("chua thanh toan")}</p>
+                <ul>
+                      {order.orderItems.map((item) => (
+                        <li key={item.product}>
+                          
+                          {order.isPaid ? ` ${item.key}` : ("Bạn phải thanh toán để nhận được key sản phẩm")}
+                        </li>
+                      ))}
+                    </ul>
+                {   /* <p>  */}
               </div>
               <div className="card card-body">
                 <ul>

@@ -66,7 +66,7 @@ function App() {
                 </li>
                 <li className="list-inline-item">``
                   <div className="dropdown pb-3">
-                    <Link style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }}>
+                    <Link to="/" style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }}>
                       Sản Phẩm
                   </Link>
                    
@@ -74,7 +74,7 @@ function App() {
                 </li>
                 <li className="list-inline-item">``
                   <div className="dropdown pb-3">
-                    <Link style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }}>
+                    <Link to="/" style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }}>
                       Liên Hệ
                   </Link>
                    
@@ -87,7 +87,7 @@ function App() {
                 <li className="list-inline-item  border border-bottom-0 border-left-0 border-top-0 pl-3 pr-3"><Link to="signin" className="pb-2" data-toggle="modal" data-target="#exampleModal" style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }}></Link>  {userInfo ? (
                   <div className="dropdown">
                     <Link to="#">
-                      {userInfo.name} <i class="fa fa-user-circle" aria-hidden="true"></i>{' '}
+                      {userInfo.name} <i className="fa fa-user-circle" aria-hidden="true"></i>{' '}
                     </Link>
                     <ul className="dropdown-content">
                       <li>
@@ -107,12 +107,12 @@ function App() {
                     <Link to="/signin">Đăng Nhập </Link>
                   )}  </li>
 
-                <li className="red-tooltip list-inline-item  " data-toggle="tooltip" data-placement="top" title="Chưa có sản phẩm trong giỏ hàng"><Link to="/cart" className="pb-2" style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }} ><i class="fa fa-shopping-bag" aria-hidden="true"></i>  Giỏ Hàng {cartItems.length > 0 && (<span className="badge">{cartItems.length}</span>)}</Link> </li>
+                <li className="red-tooltip list-inline-item  " data-toggle="tooltip" data-placement="top" title="Chưa có sản phẩm trong giỏ hàng"><Link to="/cart" className="pb-2" style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }} ><i className="fa fa-shopping-bag" aria-hidden="true"></i>  Giỏ Hàng {cartItems.length > 0 && (<span className="badge">{cartItems.length}</span>)}</Link> </li>
                 <li>
                 {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
                 <Link to="#admin">
-                  Admin <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                  Admin <i className="fa fa-id-card-o" aria-hidden="true"></i>
                 </Link>
                 <ul className="dropdown-content">
                   <li>
@@ -137,14 +137,14 @@ function App() {
                 <span className="navbar-toggler-icon" />
               </button>
               <Link className="navbar-brand" to="/"><img className="head-img p-2" src="//bizweb.dktcdn.net/100/339/085/themes/699262/assets/logo.png?1600143709781" /></Link>
-              <Link className="pb-2" style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }} >Giỏ Hàng <img src="https://img.icons8.com/material-sharp/24/000000/favorite-cart.png" /></Link>
+              <Link to="/cart" className="pb-2" style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }} >Giỏ Hàng <img src="https://img.icons8.com/material-sharp/24/000000/favorite-cart.png" /></Link>
               <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul className="navbar-nav mr-auto mt-2 mt-md-0">
                   <li className="nav-item active">
                     <Link className="nav-link" to="/">Trang Chủ <span className="sr-only">(current)</span></Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" >Giỏ Hàng</Link>
+                    <Link to="/cart" className="nav-link" >Giỏ Hàng</Link>
                   </li>
                 </ul>
               </div>

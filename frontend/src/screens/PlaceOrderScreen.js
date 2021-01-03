@@ -14,7 +14,7 @@ export default function PlaceOrderScreen(props) {
   }
   const orderCreate = useSelector((state) => state.orderCreate);
   const { loading, success, error, order } = orderCreate;
-  const toPrice = (num) => Number(num.toFixed(2)); // 5.123 => "5.12" => 5.12
+  const toPrice = (num) => Number(num.toFixed(2)); 
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
@@ -40,7 +40,7 @@ export default function PlaceOrderScreen(props) {
             <li>
               <div className="card card-body">
                 <h2>Thông tin</h2>
-                <p>
+
                   <strong>Tên Khách Hàng:</strong> {cart.shippingAddress.fullName} <br />
                   <strong>Địa Chỉ: </strong> 
                   <ul>
@@ -49,10 +49,7 @@ export default function PlaceOrderScreen(props) {
                     <li>Code : {cart.shippingAddress.postalCode}</li>
                     <li>Quốc gia : {cart.shippingAddress.country}</li>
                   </ul>
-                  ,
-                  , 
-                  ,
-                </p>
+
               </div>
             </li>
             <li>

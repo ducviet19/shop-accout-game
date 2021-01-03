@@ -109,7 +109,7 @@ export default function ShippingAddressScreen(props) {
             required
           ></input>
         </div>
-        {/* <div className="form-group">
+        <div className="form-group">
           <label htmlFor="country">Country</label>
           <input
             type="text"
@@ -119,7 +119,7 @@ export default function ShippingAddressScreen(props) {
             onChange={(e) => setCountry(e.target.value)}
             required
           ></input>
-        </div> */}
+        </div>
        
         <div>
           <label />

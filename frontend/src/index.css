@@ -442,3 +442,7 @@ button.primary {
 .form-group input {
   width: 60%;
 }
+
+.key {
+  display: none;
+}
