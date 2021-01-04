@@ -34,7 +34,7 @@ export default function SigninScreen(props) {
         </div>
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
-        <div>
+        <div className="form-group">
           <label htmlFor="email">Địa Chỉ Email</label>
           <input
             type="email"
@@ -44,7 +44,7 @@ export default function SigninScreen(props) {
             onChange={(e) => setEmail(e.target.value)}
           ></input>
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="password">Mật Khẩu</label>
           <input
             type="password"
@@ -54,13 +54,13 @@ export default function SigninScreen(props) {
             onChange={(e) => setPassword(e.target.value)}
           ></input>
         </div>
-        <div>
+        <div className="form-group">
           <label />
           <button className="primary" type="submit">
             Sign In
           </button>
         </div>
-        <div>
+        <div className="form-group">
           <label />
           <div>
             New customer?{' '}

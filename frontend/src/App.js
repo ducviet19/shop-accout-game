@@ -64,7 +64,7 @@ function App() {
                     <Link to="/">Trang Chủ</Link>
                   </div>
                 </li>
-                <li className="list-inline-item">``
+                <li className="list-inline-item">
                   <div className="dropdown pb-3">
                     <Link to="/" style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }}>
                       Sản Phẩm
@@ -72,7 +72,7 @@ function App() {
                    
                   </div>
                 </li>
-                <li className="list-inline-item">``
+                <li className="list-inline-item">
                   <div className="dropdown pb-3">
                     <Link to="/" style={{ fontWeight: 'bold !important', color: 'rgba(102,102,102,0.85)' }}>
                       Liên Hệ
@@ -175,14 +175,6 @@ function App() {
         </a>
       </div>
 
-      <div className="row">
-        <div className="col">
-          <img src="https://hgeqic7azi.vcdn.com.vn/image/catalog/Anh/Banner 14 thang 11/garena.png"></img>
-        </div>
-        <div className="col">
-          <img src="https://hgeqic7azi.vcdn.com.vn/image/catalog/Anh/Banner 14 thang 11/steam2212.png"></img>
-        </div>
-      </div>
 
         </header>
         <main>

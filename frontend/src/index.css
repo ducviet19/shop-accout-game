@@ -298,6 +298,7 @@ img.small {
   margin: 0;
   margin-top: 0.4rem;
   border-radius: 0.5rem;
+  right: 15px;
 }
 .dropdown:hover .dropdown-content {
   display: block;

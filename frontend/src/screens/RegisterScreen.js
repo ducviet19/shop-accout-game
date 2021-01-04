@@ -40,7 +40,7 @@ export default function RegisterScreen(props) {
         </div>
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
-        <div>
+        <div className="form-group">
           <label htmlFor="name">Tên</label>
           <input
             type="text"
@@ -50,7 +50,7 @@ export default function RegisterScreen(props) {
             onChange={(e) => setName(e.target.value)}
           ></input>
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -60,7 +60,7 @@ export default function RegisterScreen(props) {
             onChange={(e) => setEmail(e.target.value)}
           ></input>
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="password">Mật Khẩu</label>
           <input
             type="password"
@@ -70,7 +70,7 @@ export default function RegisterScreen(props) {
             onChange={(e) => setPassword(e.target.value)}
           ></input>
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="confirmPassword">Xác Nhận Mật Khẩu</label>
           <input
             type="password"
@@ -80,7 +80,7 @@ export default function RegisterScreen(props) {
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></input>
         </div>
-        <div>
+        <div className="form-group">
           <label />
           <button className="primary" type="submit">
             Register
@@ -90,7 +90,7 @@ export default function RegisterScreen(props) {
           <label />
           <div>
             Already have an account?{' '}
-            <Link to={`/signin?redirect=${redirect}`}>Sign-In</Link>
+            <Link to={`/signin?redirect=${redirect}`}>Đăng nhập</Link>
           </div>
         </div>
       </form>

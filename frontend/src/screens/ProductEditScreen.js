@@ -176,7 +176,7 @@ export default function ProductEditScreen(props) {
               ></input>
             </div>
             <div className="form-group">
-              <label htmlFor="description">Description</label>
+              <label htmlFor="description">Chi Tiết Sản Phẩm</label>
               <textarea
                 id="description"
                 rows="3"
@@ -187,7 +187,7 @@ export default function ProductEditScreen(props) {
               ></textarea>
             </div>
             <div className="form-group">
-              <label htmlFor="key">Key</label>
+              <label htmlFor="key">Key Sản phẩm</label>
               <input
                 id="key"
                 type="text"

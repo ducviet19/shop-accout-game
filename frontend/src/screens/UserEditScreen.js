@@ -61,7 +61,7 @@ export default function UserEditScreen(props) {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-            <div>
+            <div className="form-group">
               <label htmlFor="name">Tên</label>
               <input
                 id="name"
@@ -71,7 +71,7 @@ export default function UserEditScreen(props) {
                 onChange={(e) => setName(e.target.value)}
               ></input>
             </div>
-            <div>
+            <div className="form-group">
               <label htmlFor="email">Email</label>
               <input
                 id="email"
@@ -81,7 +81,7 @@ export default function UserEditScreen(props) {
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
             </div>
-            <div>
+            <div className="form-group">
               <label htmlFor="isSeller">Người Dùng</label>
               <input
                 id="isSeller"
@@ -90,7 +90,7 @@ export default function UserEditScreen(props) {
                 onChange={(e) => setIsSeller(e.target.checked)}
               ></input>
             </div>
-            <div>
+            <div className="form-group">
               <label htmlFor="isAdmin">Admin</label>
               <input
                 id="isAdmin"
@@ -101,7 +101,7 @@ export default function UserEditScreen(props) {
             </div>
             <div>
               <button type="submit" className="primary">
-                Update
+               Cập nhật
               </button>
             </div>
           </>

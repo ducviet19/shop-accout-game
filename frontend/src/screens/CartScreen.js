@@ -44,7 +44,7 @@ export default function CartScreen(props) {
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="small"
+                      className="img-thumbnail"
                     ></img>
                   </div>
                   <div className="col min-30">

@@ -56,8 +56,8 @@ export default function ProductScreen(props) {
                   ></img>
                 </div>
                 <div className="col">
-                  <div>
-                    <div>
+                  <div >
+                    <div className="row">
                     <ul className="list-description">
                       <li>
                         <h1 className="font-weight-bold">{product.name}</h1>
@@ -80,18 +80,16 @@ export default function ProductScreen(props) {
                         </div>
                       </li>
                       <li className="font-weight-bold">
-                        Description:
+                        Chi tiết sản phẩm:
                   <p>{product.description}</p>
                       </li>
                     </ul>
                     </div>                  
-                    <div>
+                    <div className="row">
                       
                     <div className="d-flex">
                           <div className="font-weight-bold">Số Lượng</div>
-                         
-                          <div>
-                          
+                          <div>                         
                             <select id="inputState" className="form-control"
                               value={qty}
                               onChange={(e) => setQty(e.target.value)}

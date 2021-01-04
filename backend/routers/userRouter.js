@@ -7,15 +7,15 @@ import { generateToken, isAdmin, isAuth } from '../utils.js';
 
 const userRouter = express.Router();
 
-userRouter.get(
-  '/top-sellers',
-  expressAsyncHandler(async (req, res) => {
-    const topSellers = await User.find({ isSeller: true })
-      .sort({ 'seller.rating': -1 })
-      .limit(3);
-    res.send(topSellers);
-  })
-);
+// userRouter.get(
+//   '/top-sellers',
+//   expressAsyncHandler(async (req, res) => {
+//     const topSellers = await User.find({ isSeller: true })
+//       .sort({ 'seller.rating': -1 })
+//       .limit(3);
+//     res.send(topSellers);
+//   })
+// );
 
 userRouter.get(
   '/seed',
@@ -43,7 +43,7 @@ userRouter.post(
         return;
       }
     }
-    res.status(401).send({ message: 'Invalid email or password' });
+    res.status(401).send({ message: 'Email hoặc Mật khẩu không hợp lệ' });
   })
 );
 
@@ -74,7 +74,7 @@ userRouter.get(
     if (user) {
       res.send(user);
     } else {
-      res.status(404).send({ message: 'User Not Found' });
+      res.status(404).send({ message: 'Không tìm thấy' });
     }
   })
 );
@@ -149,7 +149,7 @@ userRouter.put(
       user.isSeller = req.body.isSeller || user.isSeller;
       user.isAdmin = req.body.isAdmin || user.isAdmin;
       const updatedUser = await user.save();
-      res.send({ message: 'User Updated', user: updatedUser });
+      res.send({ message: 'Đã cập nhật user', user: updatedUser });
     } else {
       res.status(404).send({ message: 'User Not Found' });
     }

@@ -162,7 +162,7 @@ export default function OrderScreen(props) {
                 <ul>
                       {order.orderItems.map((item) => (
                         <li key={item.product}>
-                          
+                          {item.name} :
                           {order.isPaid ? ` ${item.key}` : ("Bạn phải thanh toán để nhận được key sản phẩm")}
                         </li>
                       ))}
